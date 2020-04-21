@@ -126,7 +126,7 @@ class TasksController extends Controller
         
          $micropost = \App\Micropost::find($id);
 
-        if (\Auth::id() === $micropost->user_id) {
+        if (\Auth::id() === $task->user_id) {
              // $task = Task::find($id);
             $task->user_id = $request->user_id;
             $task->status = $request->status; 
