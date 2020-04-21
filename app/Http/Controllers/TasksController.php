@@ -124,7 +124,7 @@ class TasksController extends Controller
             'content' => 'required|max:191',
         ]);
         
-         $micropost = \App\Micropost::find($id);
+         $task = \App\Task::find($id);
 
         if (\Auth::id() === $task->user_id) {
              // $task = Task::find($id);
