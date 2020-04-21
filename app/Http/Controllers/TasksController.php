@@ -128,7 +128,7 @@ class TasksController extends Controller
 
         if (\Auth::id() === $task->user_id) {
              // $task = Task::find($id);
-            $task->user_id = $request->user_id;
+            $task->user_id = \Auth::id();
             $task->status = $request->status; 
             $task->content = $request->content;
             $task->save();
